@@ -64,7 +64,7 @@ img {
   }
   .nav-links {
     list-style: none;
-    background-color: rgba($color: #000000, $alpha: 0.75);
+    background-color: black;
     padding: 1.5rem 2rem;
     border-radius: 3rem;
     a {
@@ -94,7 +94,7 @@ img {
     }
   }
   .dropdown {
-    background-color: rgba($color: black, $alpha: 0.75);
+    background-color: black;
     padding: 1em 0;
     position: absolute; /*WITH RESPECT TO PARENT*/
     display: none;
@@ -111,7 +111,7 @@ img {
     list-style: none;
   }
   .dropdown li:hover {
-    background-color: rgba($color: #000000, $alpha: 0.75);
+    background-color: black;
   }
   .dd-father:hover .dropdown {
     display: block;
@@ -134,11 +134,12 @@ img {
     .menu {
       display: none;
       position: absolute;
-      background-color: rgba($color: #000000, $alpha: 0.75);
+      background-color: rgba($color: #000000, $alpha: 1);
       right: 0;
       left: 0;
       text-align: center;
-      padding: 16px 0;
+      padding: 5rem 0;
+      z-index: 100;
     }
     .menu li:hover {
       display: inline-block;
@@ -282,6 +283,17 @@ img {
         color: #9e9e9e;
       }
     }
+    .img-box {
+      position: relative;
+      display: flex;
+      .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8rem;
+      }
+    }
     .img-box:before {
       content: "";
       position: absolute;
@@ -295,7 +307,6 @@ img {
   }
   .img-right {
     .img-box {
-      position: relative;
       transform: translateX(30%);
     }
     .img-box:before {
@@ -308,7 +319,6 @@ img {
     }
     .img-box {
       order: 1;
-      position: relative;
       transform: translateX(-30%);
     }
     .img-box:before {
@@ -446,6 +456,9 @@ img {
         margin: 0 auto;
         .text-area {
           margin-left: 0;
+          .buttons .btn-primary {
+            margin-right: 1rem;
+          }
           .primary-heading {
             margin: 2rem 0 5rem;
           }
@@ -454,6 +467,9 @@ img {
           }
         }
       }
+    }
+    .hero-img {
+      display: none;
     }
   }
   .about-section {
@@ -495,11 +511,15 @@ img {
 }
 @media (max-width: 592px) {
   html {
-    font-size: 50%;
+    font-size: 58%;
+  }
+
+  .logo {
+    width: 15rem;
   }
   .slider {
     .slide-text-content {
-      height: 70vh;
+      height: 75vh;
       width: 100%;
     }
   }
